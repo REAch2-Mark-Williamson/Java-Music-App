@@ -1,0 +1,14 @@
+Must:
+
+- Store a list of song objects. 
+- Each song object should be able to store the artist’s name, the song title, and the current number of times the song has been played.
+- Add a new song to the list of songs
+- Remove a song from the list of songs
+- Print a list of all the songs stored
+- Print a list of songs over a given number of play
+
+
+Extras:
+- Play songs based on a selected song object
+- GUI
+- Favorate/rate song objects

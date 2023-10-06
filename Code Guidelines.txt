@@ -1,0 +1,28 @@
+All code within this document must comply with the following guidelines for writing code.
+The purpose of this document is to create a unified code base that is simple to read and follows best practices.
+
+1. All variables must clearly desctibe what what data they hold.
+Good:
+User_ID
+
+Bad:
+User
+x
+
+2. All variables must use _ to sepertae words and the start of each word must be capitlised.
+Good:
+Music_File_Location
+
+Bad:
+musicfilelocation
+music_file_location
+MusicFileLocation
+
+3. If a variable dosent change it must be defined as a constent.
+
+4. Code should never be writen twice
+
+5. Code comments should be used freqently. You should be able to know what steps the code takes by only reading code comments.
+
+6. Code must be indented where applicable
+
