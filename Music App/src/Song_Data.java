@@ -1,11 +1,11 @@
-public class SongData {
+public class Song_Data {
     //Declares varibles
     private String Song_Title;
     private String Artist_Name;
     private int Play_Count;
 
     //Song class Constructor
-    public SongData(String Song_Title, String Artist_Name, int Play_Count) {
+    public Song_Data(String Song_Title, String Artist_Name, int Play_Count) {
         this.Song_Title = Song_Title;
         this.Artist_Name = Artist_Name;
         this.Play_Count = Play_Count;

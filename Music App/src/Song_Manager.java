@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SongManager {
+public class Song_Manager {
     //Declares varibles
-    private ArrayList<SongData> Songs;
+    private ArrayList<Song_Data> Songs;
     private Scanner SM_Scanner;
     
-    //SongManager class Constructor
-    public SongManager() {
-        Songs = new ArrayList<SongData>();
+    //Song Manager class Constructor
+    public Song_Manager() {
+        Songs = new ArrayList<Song_Data>();
         SM_Scanner = new Scanner(System.in);
     }
 
     //Adds Song to the Array list
-    public void Add_Song(SongData Song) {
+    public void Add_Song(Song_Data Song) {
         Songs.add(Song);
     }
 
@@ -29,7 +29,7 @@ public class SongManager {
         int New_Play_Count = SM_Scanner.nextInt();
         SM_Scanner.nextLine();
 
-        SongData song = new SongData(New_Title, New_Artist, New_Play_Count);
+        Song_Data song = new Song_Data(New_Title, New_Artist, New_Play_Count);
         Add_Song(song);
     }
 
@@ -49,7 +49,7 @@ public class SongManager {
     }
 
     //Reterns songs in the Array list
-    public ArrayList<SongData> Get_Songs() {
+    public ArrayList<Song_Data> Get_Songs() {
         return Songs;
     }
 

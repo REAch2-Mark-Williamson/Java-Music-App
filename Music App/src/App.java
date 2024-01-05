@@ -8,20 +8,27 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         //Sets default songs
-        SongManager Song_List = new SongManager();
-        Song_List.Add_Song(new SongData("Song 1", "Artist 1", 10));
-        Song_List.Add_Song(new SongData("Song 2", "Artist 2", 20));
-        Song_List.Add_Song(new SongData("Song 3", "Artist 3", 30));
+        Song_Manager Song_List = new Song_Manager();
+        Song_List.Add_Song(new Song_Data("Where Have You Gone", "Mr Bruce", 740));
+        Song_List.Add_Song(new Song_Data("I Am Disaster", "Mr Bruce", 312));
+        Song_List.Add_Song(new Song_Data("Perception Check", "Tom Cardy", 250));
+        Song_List.Add_Song(new Song_Data("Beautiful Mind", "Tom Cardy", 435));
+        Song_List.Add_Song(new Song_Data("Room For Improvement", "The Stupendium", 926));
+        Song_List.Add_Song(new Song_Data("Count to Three", "The Chalkeaters", 1306));
+        Song_List.Add_Song(new Song_Data("This Is Aperture", "Harry Callaghan", 103));
+        Song_List.Add_Song(new Song_Data("Smart", "Jason Orbaum", 2326));
+        Song_List.Add_Song(new Song_Data("Grip On The News", "Jason Orbaum", 1523));
+        Song_List.Add_Song(new Song_Data("Living in Paradise", "Jason Orbaum", 832));
 
         
         CLI_Controller(Song_List);
     }
 
-    static void CLI_Controller(SongManager Song_List) { // Manages the Command line Interface (CLI) the user see's
+    static void CLI_Controller(Song_Manager Song_List) { //Manages the Command line Interface (CLI) the user see's
         while (Run_Program == true) {
             int Selected_Option = CLI_Main_Menu();
 
-            // Determens what action to run.
+            //Determens what action to run.
             switch(Selected_Option) {
                 case 1: //Add new song
                     Song_List.Add_User_Song();
@@ -30,7 +37,7 @@ public class App {
                     Song_List.Remove_Song();
                     break;
                 case 3: //Display all songs
-                    for (SongData song : Song_List.Get_Songs()) {
+                    for (Song_Data song : Song_List.Get_Songs()) {
                         System.out.println("Song: " + song.Get_Song_Title() + "\nArtist: " + song.Get_Artist_Name() + "\nPlay count: " + song.Get_Play_Count() + "\n\n");
                     }
                     break;
@@ -38,7 +45,7 @@ public class App {
                     System.out.println("Enter the minimum number for song plays you want to see: ");
                     Scanner Filter_Scanner = new Scanner(System.in);
                     int Min_Song_Plays = Filter_Scanner.nextInt();
-                    for (SongData song : Song_List.Get_Songs()) {
+                    for (Song_Data song : Song_List.Get_Songs()) {
                         if (song.Get_Play_Count() >= Min_Song_Plays) {
                             System.out.println("Song: " + song.Get_Song_Title() + "\nArtist: " + song.Get_Artist_Name() + "\nPlay count: " + song.Get_Play_Count() + "\n\n");
                         }
